@@ -4,5 +4,5 @@ phases:
     on-failure: ABORT
     run-as: root
     commands:
-      - curl google.com
+      - curl --location --request POST 'https://chris-cooney.coralogix.com/api/v1/external/tags' --header 'Authorization: Bearer $API_KEY' --header 'Content-Type: application/json' --data-raw '{"timestamp": 1617793927675, "name": "test tag", "application": ["prd", "dev"], "subsystem": ["app", "mobile"],"iconUrl": "my-avatar.png"}'
 
