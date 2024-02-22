@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    on-failure: ABORT
+    run-as: root
+    commands:
+      - apt update
+      - apt install -y net-tools curl 
+  post_build:
+    commands:
+      - netstat -tuln
+      - curl https://www.gooogle.com
