@@ -19,5 +19,5 @@ phases:
         -d '{
           "timestamp": "$CODEBUILD_START_TIME",
           "name": "$CODEBUILD_SOURCE_VERSION",
-          "applications": ["my-app"]
+          "applications": ["aws"]
         }'
