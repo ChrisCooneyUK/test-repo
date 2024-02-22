@@ -4,9 +4,5 @@ phases:
     on-failure: ABORT
     run-as: root
     commands:
-      - apt update
-      - apt install -y net-tools curl 
-  post_build:
-    commands:
-      - netstat -tuln
       - curl https://www.gooogle.com
+
