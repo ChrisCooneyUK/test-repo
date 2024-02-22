@@ -4,5 +4,5 @@ phases:
     on-failure: ABORT
     run-as: root
     commands:
-      - curl https://www.gooogle.com
+      - curl google.com
 
