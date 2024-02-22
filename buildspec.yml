@@ -11,9 +11,9 @@ phases:
       - echo "$CODEBUILD_RESOLVED_SOURCE_VERSION"
       - echo $CODEBUILD_START_TIME
       - >
-        curl --location 'https://webapi.coralogix.com/api/v1/external/tags/' 
-          --header 'Content-Type: application/json' 
-          --header 'Authorization: Bearer '"$API_KEY"' 
+        curl --location 'https://webapi.coralogix.com/api/v1/external/tags/' \
+          --header 'Content-Type: application/json' \
+          --header 'Authorization: Bearer '"$API_KEY"' \
           --data '{     
               "name": "'"$CODEBUILD_RESOLVED_SOURCE_VERSION"'",
               "application": ["aws"],
