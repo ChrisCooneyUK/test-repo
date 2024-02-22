@@ -8,8 +8,6 @@ phases:
     commands:
   build:
     commands:
-      - echo "$CODEBUILD_RESOLVED_SOURCE_VERSION"
-      - echo $CODEBUILD_START_TIME
       - >
         curl --location 'https://webapi.coralogix.com/api/v1/external/tags/' \
           --header 'Content-Type: application/json' \
