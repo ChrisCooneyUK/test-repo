@@ -8,16 +8,14 @@ phases:
     commands:
   build:
     commands:
-      # Replace <CORALOGIX_TAGS_API_ENDPOINT> with the actual endpoint URL
-      # Ensure your JSON body structure matches what your API expects
       - echo "$CODEBUILD_RESOLVED_SOURCE_VERSION"
       - echo $CODEBUILD_START_TIME
       - >
-        curl -X POST "https://webapi.coralogix.com/api/v1/external/tags/"
-        -H "Authorization: Bearer $API_KEY"
-        -H "Content-Type: application/json"
-        -d '{
-          "timestamp": "'"$CODEBUILD_START_TIME"'",
-          "name": "'"$CODEBUILD_RESOLVED_SOURCE_VERSION"'",
-          "applications": ["aws"]
-        }'
+        curl --location 'https://webapi.coralogix.com/api/v1/external/tags/' 
+          --header 'Content-Type: application/json' 
+          --header 'Authorization: Bearer '"$API_KEY"' 
+          --data '{     
+              "name": "'"$CODEBUILD_RESOLVED_SOURCE_VERSION"'",
+              "application": ["aws"],
+              "subsystem": ["tag-build"]
+          }'
