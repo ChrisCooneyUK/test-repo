@@ -6,8 +6,6 @@ phases:
       - which curl || (apt-get update && apt-get install -y curl)
   pre_build:
     commands:
-      # Optional: Any preparatory commands go here
-      - 
   build:
     commands:
       # Replace <CORALOGIX_TAGS_API_ENDPOINT> with the actual endpoint URL
