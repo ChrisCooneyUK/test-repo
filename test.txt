@@ -1,5 +1,1 @@
 This is a test file so we have a commit on main
-
-Thjis is a dude test to see the event hitting Coralogix
-wraefgrshgrhHR
-rsjtjstjstsjjtjtjt
