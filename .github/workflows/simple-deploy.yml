@@ -33,8 +33,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           #!/bin/bash
-          FLIP=$(($(($RANDOM%10))%10))
-          if [ $FLIP -lt 2 ];then
+          FLIP=$((1 + $RANDOM % 10))
+          if [ $FLIP -lt 10 ];then
             exit 125
           else
             echo "Deploy successful"
